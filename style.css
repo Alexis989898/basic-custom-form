@@ -1,0 +1,102 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+#custom-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  width: 30%;
+  max-width: 100%;
+  height: auto;
+  padding: 2%;
+  transition: 1000ms;
+}
+
+#custom-fieldset {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height: auto;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+#f-btn {
+  margin: 10px;
+  padding: 10px;
+  grid-column: 2 / 3;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  grid-column: 1 / 3; /* Span across both columns */
+}
+
+input:invalid {
+  border-color: #900;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+.error {
+  width: 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}
+
+/* ↓ quick dark mode CSS ↓ */
+
+body {
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text */
+}
+
+input,
+textarea,
+select,
+button {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+a {
+  color: #1e90ff;
+}
+
+label,
+legend {
+  color: #ccc;
+}
+
+fieldset {
+  border: 1px solid #666;
+}
