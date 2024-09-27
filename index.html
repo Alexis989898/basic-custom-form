@@ -14,20 +14,20 @@
             <legend>Custom form</legend>
             <div class="form-group full-width">
                 <input placeholder="Email" id="f-email" type="email" required>
-                <span id="error-email" class="error" aria-live="polite">asdasdasd</span>
+                <span id="error-email" class="error" aria-live="polite"></span>
             </div>
 
             <div class="form-group half-width">
-                <input placeholder="Country" id="f-country" type="country" required>
+                <input placeholder="Country" id="f-country" type="text" list="countries" required>
                 <span id="error-country" class="error" aria-live="polite"></span>
             </div>
             <div class="form-group half-width">
                 <input placeholder="Zipcode" id="f-zipcode" type="text" required>
-                <span id="error-Zipcode" class="error" aria-live="polite"></span>
+                <span id="error-zipcode" class="error" aria-live="polite"></span>
             </div>
 
             <div class="form-group half-width">
-                <input placeholder="Password" id="f-password" type="password" required>
+                <input placeholder="Password" id="f-password" type="password" minlength="12" required>
                 <span id="error-password" class="error" aria-live="polite"></span>
             </div>
             <div class="form-group half-width">
@@ -37,19 +37,19 @@
 
             <button type="submit" id="f-btn">Submit</button>
         </Fieldset>
-        <!--
-        It should use live inline validation to inform the user whether a field is properly filled in or not. That means
-        highlighting a field red and providing a helpful error message until it has been filled in properly.
-        The form doesn’t need to actually submit, but you should give an error message if the button is pushed with any
-        active errors or unfilled required fields.
-
-        do all of your validation in your JavaScript files
-
-        If all is well and the form is “submitted”, give the user a high five.
-        -->
-
     </form>
 
+
+
+
+    <datalist id="countries">
+
+    </datalist>
+
+
+    <div id="submit-message">
+        Form submitted successfully!
+    </div>
 
     <script src="script.js"></script>
 </body>
